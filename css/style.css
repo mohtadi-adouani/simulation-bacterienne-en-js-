@@ -1,0 +1,51 @@
+body {
+  background-color:#FFF0F5;
+  
+}
+
+#menu {
+  margin: 0 ;
+  padding: 0 ;
+  list-style: none ;
+  text-align: center ;
+}
+
+#menu li {
+  display: inline;
+}
+
+#menu li a {
+  display: inline ;
+  background: #c00 ;
+  color: #fff ;
+  font: 1em "Trebuchet MS",Arial,sans-serif ;
+  line-height: 1em ;
+  text-align: center ;
+  text-decoration: none ;
+  padding: 4px 0 ;
+}
+
+img {
+  border-radius: 50%;
+}
+
+
+#titre {
+  color: red;
+  background-color:gray;
+}
+
+
+
+
+table,
+td {
+    border: 1px solid #333;
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+

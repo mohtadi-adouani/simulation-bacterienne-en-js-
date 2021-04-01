@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Simulation</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+
+<!-- MENU-->
+  <ul id="menu">
+  <li><a href="home.html" title="home">Home</a></li>
+  <li><a href="experience.html" title="Commencer">Experience</a></li>
+  <li><a href="source.html" title="Nos sources">Source</a></li>
+  </ul>
+
+<!--------->  
+    <h1> Population de bacteries</h1>
+
+    <img src="image/lacto.jpg" alt="Photo de Lactobacillus" />
+    <p id="informations">Temperature ideale du Lactobacillus : 35 °C</p>
+
+    <!-- Nombre d'occurence que la simulation doit faire -->
+    <label for="time">Nombre d'heurs</label>
+    <input type="range" id="time" name="time"
+       minlength="1" maxlength="168" size="10"> <!-- Maximum une semaine-->
+    <br>
+    <!-- Temperature Eau -->
+    <label for="temperatureEau">Temperature Eau</label>
+    <input type="number" id="temperatureEau" name="temperatureEau"
+       minlength="0" maxlength="80" size="10">
+    <br>
+    <!-- Temperature Lait -->
+    <label for="temperatureLait">Temperature Lait</label>
+    <input type="number" id="temperatureLait" name="temperatureLait"
+       minlength="0" maxlength="80" size="10">
+    <br>
+    <!-- Temperature Biere -->
+    <label for="temperatureBiere">Temperature Biere</label>
+    <input type="number" id="temperatureBiere" name="temperatureBiere"
+       minlength="0" maxlength="80" size="10">
+    
+    <button onclick="Start()">Start</button>
+
+    <!--Les emplacements des representations visuelles-->
+    <canvas id="graphique1" width="600" height="300"></canvas>
+     <br>
+     <canvas id="graphique2" width="600" height="300"></canvas>
+     <br>
+     <!-- Notre script-->
+    <script src="js/scripts.js"></script>
+    <!-- Bibiotheque Chart js disponible en ligne -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+  
+  </body>
+</html> 
