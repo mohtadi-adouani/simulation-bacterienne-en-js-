@@ -1,18 +1,3 @@
-var temperatureMoyenne = 17.5; //temperature de l'environnement
-var temperatureIdealeLacto = 35; // temperature ideale de la lactobacilus
-var cycleBacterien = 5; //duree de vie d'une bacteire en heures
-var GlucoseParDivision = 0.001; //Quantitee de glucose uttilisee par division cellulaire,unite virtualisee
-
-
-//Les valeures initiales du formulaire 
-document.getElementById('time').value = '5';
-document.getElementById('temperatureEau').value = '18';
-document.getElementById('temperatureLait').value = '14';
-document.getElementById('temperatureBiere').value = '7';
-
-
-//document.getElementById('informations').value = "Temperature ideale du Lactobacillus : "+temperatureIdealeLacto+"\n";
-
 //La class Environnement
 class Environnement{
 	constructor(ph,facteurMultiplication,temperature,nom,glucose){
@@ -34,7 +19,6 @@ class Environnement{
 
 }
 
-
 //La class Bacterie
 class Bacterie{
 	constructor(ph,divisionsHeure,temperature,nom){
@@ -52,6 +36,9 @@ class Bacterie{
 	}
 
 }
+
+
+
 
 //Class Experience
 class Experience{
@@ -79,7 +66,7 @@ class Experience{
 	//Fait l'experience pour un element et une bacterie
 	calculerPourUnelement(element,bacterie,col){
 		let glucose = element.glucose;//
-		let color = ['#ff6384','#36a2eb','#cc65fe','#ffce56'];
+		let color = ['#000000','#800000','#008000','#cc99ff','#ccff99','#ffe699','#ff6384','#36a2eb','#cc65fe','#ffce56'];
 		let bacterieTab = new Array(this.nombreHeurs);
 		bacterieTab[0] = this.bacteriesBase;
 		for(let i = 1 ; i < this.nombreHeurs ; i++){
@@ -123,15 +110,40 @@ class Experience{
 
 
 
+
+
+
+
+var temperatureMoyenne = 17.5; //temperature de l'environnement
+var temperatureIdealeLacto = 35; // temperature ideale de la lactobacilus
+var cycleBacterien = 5; //duree de vie d'une bacteire en heures
+var GlucoseParDivision = 0.001; //Quantitee de glucose uttilisee par division cellulaire,unite virtualisee
+var glucoseDispo = 10000; //glucose generique
+
+//Les valeures initiales du formulaire 
+document.getElementById('time').value = '20';
+document.getElementById('temperatureEau').value = '18';
+document.getElementById('temperatureLait').value = '14';
+document.getElementById('temperatureBiere').value = '13';
+
+
+
+
+
+
+
+
+
+
 //Nous declarons nos environnements pour encapsuler
-const eau = new Environnement(7,2,temperatureMoyenne,"Eau",1000);
-const lait = new Environnement(7,2.001,temperatureMoyenne,"Lait",1000);
-const biere = new Environnement(5.6,2.002,temperatureMoyenne,"Biere",1000);
+const eau = new Environnement(7,2,temperatureMoyenne,"Eau",glucoseDispo);
+const lait = new Environnement(7,2.001,temperatureMoyenne,"Lait",glucoseDispo);
+const biere = new Environnement(5.6,2.002,temperatureMoyenne,"Biere",glucoseDispo);
 
 //Nous declarons nos Bacteries pour encapsuler
 const lactobacillus = new Bacterie(7,2,temperatureIdealeLacto,"Lactobacillus");
 
-//Creer un tableau de n case de 0 a n pour le graphique
+//Creer un tableau de n case de 0 a n pour l'absice du graphique
 function getLabels(n){
 	tab = new Array(n);
 	for(let i = 0 ; i < n ; i++){
