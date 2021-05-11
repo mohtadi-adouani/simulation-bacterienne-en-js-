@@ -64,6 +64,7 @@ class Experience{
 	}
 
 	//Fait l'experience pour un element et une bacterie
+	//Calcule le nombre de bacteries en fonction de l'environnement et en fonction du glucose
 	calculerPourUnelement(element,bacterie,col){
 		let glucose = element.glucose;//
 		let color = ['#000000','#800000','#008000','#cc99ff','#ccff99','#ffe699','#ff6384','#36a2eb','#cc65fe','#ffce56'];
